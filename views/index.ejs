@@ -2,9 +2,34 @@
 <html>
   <head>
     <title><%= title %></title>
+    <link rel="shortcut icon" href="images/car-rental.png" type="image/x-icon">
     <link rel='stylesheet' href='/stylesheets/custom-bootstrap.min.css' />
   </head>
   <body>
+    <!--* Header -->
+    <header>
+      <%- include('./partials/header'); %>
+    </header>
+
+    <!--* Body -->
+    <div class="container mt-5">
+      <div class="row align-items-center">
+        <div class="col-5">
+          <h3 class="lh-base">
+            Tempat rental mobil dengan berbagai armada yang terbaik dan terjangkau hanya di <span class="text-primary">Sor~Car</span>
+          </h3>
+          <p>
+            Performa mobil yang mulus dan nyaman untuk di kendarai, 
+            fungsional mobil yang selalu dicheck & diperbaiki, 
+            Pengurusan administrasi yang tervalidasi & akurat.
+          </p>
+          <button type="button" class="btn btn-primary text-light mt-2 shadow">Open Catalog</button>
+        </div>
+        <div class="col d-flex justify-content-center">
+          <h1>This Image</h1>
+        </div>
+      </div>
+    </div>
 
     <script src="bootstrap.min.js"></script>
   </body>
