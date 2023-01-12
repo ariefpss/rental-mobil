@@ -7,30 +7,34 @@
   </head>
   <body>
     <!--* Header -->
-    <header>
+    <header class="navbar navbar-expand-lg bg-light shadow-sm">
       <%- include('./partials/header'); %>
     </header>
 
-    <!--* Body -->
-    <div class="container mt-5">
+    <!--* Content -->
+    <div class="container-xl mt-5 ps-5 pe-5 pe-lg-3 ps-lg-3">
       <div class="row align-items-center">
-        <div class="col-5">
+        <div class="col-6 col-lg-5">
           <h3 class="lh-base">
             Tempat rental mobil dengan berbagai armada yang terbaik dan terjangkau hanya di <span class="text-primary">Sor~Car</span>
           </h3>
-          <p>
+          <p class="d-none d-lg-block lh-base">
             Performa mobil yang mulus dan nyaman untuk di kendarai, 
             fungsional mobil yang selalu dicheck & diperbaiki, 
             Pengurusan administrasi yang tervalidasi & akurat.
           </p>
           <button type="button" class="btn btn-primary text-light mt-2 shadow">Open Catalog</button>
         </div>
-        <div class="col d-flex justify-content-center">
-          <h1>This Image</h1>
+        <div class="col-12 col-lg-7 d-flex justify-content-center">
+          <img src="images/car-landing-page.png" alt="" class="img-fluid">
         </div>
       </div>
     </div>
 
+    <!--* Footer -->
+    <footer>
+
+    </footer>
     <script src="bootstrap.min.js"></script>
   </body>
 </html>
