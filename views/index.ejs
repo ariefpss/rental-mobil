@@ -1,33 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= title %></title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="shortcut icon" href="images/car-rental.png" type="image/x-icon">
-    <link rel='stylesheet' href='/stylesheets/custom-bootstrap.min.css' />
+    <link rel='stylesheet' href='stylesheets/custom-bootstrap.min.css' />
+    
+    <title><%= title %></title>
   </head>
   <body>
     <!--* Header -->
-    <header class="navbar navbar-expand-lg bg-light shadow-sm">
-      <%- include('./partials/header'); %>
-    </header>
+    <%- include('./partials/header'); %>
 
     <!--* Content -->
-    <div class="container-xl mt-5 ps-5 pe-5 pe-lg-3 ps-lg-3">
+    <div class="container mt-3">
       <div class="row align-items-center">
-        <div class="col-6 col-lg-5">
-          <h3 class="lh-base">
-            Tempat rental mobil dengan berbagai armada yang terbaik dan terjangkau hanya di <span class="text-primary">Sor~Car</span>
-          </h3>
-          <p class="d-none d-lg-block lh-base">
-            Performa mobil yang mulus dan nyaman untuk di kendarai, 
-            fungsional mobil yang selalu dicheck & diperbaiki, 
-            Pengurusan administrasi yang tervalidasi & akurat.
+        <div class="col-12 col-lg-5">
+          <h2 class="lh-base fw-bold">
+            Rental mobil dengan berbagai armada yang terbaik dan terjangkau
+          </h2>
+          <p class="fw-light lh-base mb-2">
+            Performa mobil yang mulus dan nyaman untuk di kendarai. 
+            <span class="d-none d-lg-block">
+              Fungsional mobil yang selalu dicheck & diperbaiki, 
+              Pengurusan administrasi yang tervalidasi & akurat.
+            </span>
           </p>
-          <button type="button" class="btn btn-primary text-light mt-2 shadow">Open Catalog</button>
+          <button type="button" class="btn btn-primary text-light shadow fw-bold">Open Catalog</button>
         </div>
         <div class="col-12 col-lg-7 d-flex justify-content-center">
-          <img src="images/car-landing-page.png" alt="" class="img-fluid">
+          <img src="images/car-landing-page.png" alt="" class="img-fluid d-none d-lg-block">
         </div>
+      </div>
+    </div>
+
+    <div class="container mt-5">
+      <div class="row align-items-center">
+        <div class="col-12 d-flex flex-column text-center">
+          <h5 class="text-primary">Service Kami</h5>
+          <h3>
+            Cepat di tanggapi dan <br> dapat di akses dengan muda
+          </h3>
+        </div>
+        <div class="col-12 col-lg-4"></div>
       </div>
     </div>
 
@@ -35,6 +52,6 @@
     <footer>
 
     </footer>
-    <script src="bootstrap.min.js"></script>
+    <script src="bootstrap.bundle.js"></script>
   </body>
 </html>
