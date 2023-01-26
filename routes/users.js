@@ -1,9 +1,8 @@
 var express = require('express');
+const userController = require('../app/controllers/userController');
 var router = express.Router();
 
-/* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+//* Get view form signup
+router.get('/signup', userController.vFormSignup);
 
 module.exports = router;
