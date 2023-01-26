@@ -16,7 +16,6 @@
     <%- include('./partials/header'); %>
 
     <!--* Content -->
-    
     <!--* Landing page  -->
     <div class="container mt-3">
       <div class="row align-items-center">
@@ -87,37 +86,48 @@
           <h3 class="text-muted mb-4">Cari mobil terbaikmu dari brand ternama</h3>
         </div>
 
-        <div class="col-12 col-lg-12 d-flex justify-content-around">
-          <button type="button" class="btn btn-primary text-light p-3 shadow fw-bold">
-            <div class="d-lg-flex align-items-center">
-              <img class="img-fluid me-2" src="images/honda-logo.png" alt="">
-              Honda
-            </div>
-          </button>
-          <button type="button" class="btn btn-light p-3 fw-bold">
-            <div class="d-lg-flex align-items-center">
-              <img class="img-fluid me-2" src="images/nissan-logo.png" alt="">
-              Nissan
-            </div>
-          </button>
-          <button type="button" class="btn btn-light p-3 fw-bold">
-            <div class="d-lg-flex align-items-center">
-              <img class="img-fluid me-2" src="images/audi-logo.png" alt="">
-              Audi
-            </div>
-          </button>
-          <button type="button" class="btn btn-light p-3 fw-bold">
-            <div class="d-lg-flex align-items-center">
-              <img class="img-fluid me-2" src="images/mazda-logo.png" alt="">
-              Mazda
-            </div>
-          </button>
-          <button type="button" class="btn btn-light p-3 fw-bold">
-            <div class="d-lg-flex align-items-center">
-              <img class="img-fluid me-2" src="images/toyota-logo.png" alt="">
-              Toyota
-            </div>
-          </button>
+        <div class="col-12 d-flex justify-content-around">
+          
+          <div class="col-6 col-lg-2 text-center">
+            <button type="button" class="btn btn-primary text-light p-3 shadow fw-bold">
+              <div class="d-lg-flex align-items-center">
+                <img class="img-fluid me-2" src="images/honda-logo.png" alt="">
+                Honda
+              </div>
+            </button>
+          </div>
+          <div class="col-6 col-lg-2 text-center">
+            <button type="button" class="btn btn-light p-3 fw-bold">
+              <div class="d-lg-flex align-items-center">
+                <img class="img-fluid me-2" src="images/nissan-logo.png" alt="">
+                Nissan
+              </div>
+            </button>
+          </div>
+          <div class="col-2 col-lg-2 d-none d-lg-block text-center">
+            <button type="button" class="btn btn-light p-3 fw-bold">
+              <div class="d-lg-flex align-items-center">
+                <img class="img-fluid me-2" src="images/audi-logo.png" alt="">
+                Audi
+              </div>
+            </button>
+          </div>
+          <div class="col-2 col-lg-2 d-none d-lg-block text-center">
+            <button type="button" class="btn btn-light p-3 fw-bold">
+              <div class="d-lg-flex align-items-center">
+                <img class="img-fluid me-2" src="images/mazda-logo.png" alt="">
+                Mazda
+              </div>
+            </button>
+          </div>
+          <div class="col-2 col-lg-2 d-none d-lg-block text-center">
+            <button type="button" class="btn btn-light p-3 fw-bold">
+              <div class="d-lg-flex align-items-center">
+                <img class="img-fluid me-2" src="images/toyota-logo.png" alt="">
+                Toyota
+              </div>
+            </button>
+          </div>
         </div>
 
         <div class="col-6 col-lg-3 mt-5">
@@ -454,9 +464,8 @@
     </div>
 
     <!--* Footer -->
-    <footer>
+    <%- include('./partials/footer'); %>
 
-    </footer>
     <!-- <script src="bootstrap.bundle.js"></script> -->
     <script src="bootstrap.min.js"></script>
   </body>
