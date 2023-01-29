@@ -1,4 +1,4 @@
-@font-face{font-family:Poppins;src:url("../fonts/Poppins/Poppins-Regular.ttf")}.fs-7{font-size:14px}.full-height{height:100vh}/*!
+.full-height{height:100vh}.form-control:focus{box-shadow:none !important;-webkit-box-shadow:none !important;-moz-box-shadow:none !important}@font-face{font-family:Poppins;src:url("../fonts/Poppins/Poppins-Regular.ttf")}.fs-7{font-size:14px}/*!
  * Bootstrap  v5.3.0-alpha1 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
