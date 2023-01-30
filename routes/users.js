@@ -1,8 +1,10 @@
 var express = require('express');
-const userController = require('../app/controllers/userController');
 var router = express.Router();
 
-//* Get view form signup
+const userController = require('../app/controllers/userController');
+
+// TODO: CRUD Users 
 router.get('/signup', userController.vFormSignup);
+router.post('/signup', userController.createUser);
 
 module.exports = router;
