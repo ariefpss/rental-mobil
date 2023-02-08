@@ -8,18 +8,19 @@ module.exports = {
     },
 
     createUser (req, res) {
-        console.log(req.body.email);
+        const salt = bcrypt.genSaltSync(10);
+        const passwordHash = bcrypt.hashSync(req.body.password, salt)
 
-        // User.create({
-        //     username: req.body.username,
-        //     email: req.body.email,
-            // password: passwordHash
+        User.create({
+            username: req.body.username,
+            email: req.body.email,
+            password: passwordHash
 
-        // }).then( user => {
-        //     console.log(user);
+        }).then( user => {
+            console.log(user);
 
-        // }).catch( (error) => {
-        //     console.log(error);
-        // });
+        }).catch( (error) => {
+            console.log(error);
+        });
     }
 }
