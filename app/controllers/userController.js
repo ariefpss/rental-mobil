@@ -1,5 +1,7 @@
-var User = require('../database/models/User');
 var bcrypt = require('bcrypt');
+var Sequelize = require('sequelize');
+
+var User = require('../database/models').users;
 
 module.exports = {
     
@@ -8,19 +10,22 @@ module.exports = {
     },
 
     createUser (req, res) {
-        const salt = bcrypt.genSaltSync(10);
-        const passwordHash = bcrypt.hashSync(req.body.password, salt)
+        var salt = bcrypt.genSaltSync(10);
+        var passwordHash = bcrypt.hashSync(req.body.password, salt);
 
-        User.create({
+        var user = {
             username: req.body.username,
             email: req.body.email,
             password: passwordHash
+        }
 
-        }).then( user => {
-            console.log(user);
-
-        }).catch( (error) => {
-            console.log(error);
-        });
+        User.create(user)
+            .then(data => { res.send(data); })
+            .catch(Sequelize.ValidationError, (err) => {
+                res.status(422).send(err.errors);
+            })
+            .catch(err => {
+                res.status(400).send({ message: err.message });
+            });
     }
 }

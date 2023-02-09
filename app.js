@@ -5,11 +5,29 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var logger = require('morgan');
 
+var dbconnect = require('./app/database/models')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
 
+//TODO: Check & synchronoun to database
+dbconnect.sequelize.authenticate()
+  .then(() => {
+    console.log("Connected in the database.");
+    
+  }).catch((err) => {
+    console.log("Failed connected in the database: ", error);
+  });
+
+dbconnect.sequelize.sync()
+  .then(() => {
+    console.log("Sync db.");
+
+  }).catch((err) => {
+    console.log("Failed to sync db: ", err.message) ;
+  });
+  
 //TODO: Configuration body parser
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json()); 
