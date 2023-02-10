@@ -21,11 +21,8 @@ module.exports = {
 
         User.create(user)
             .then(data => { res.send(data); })
-            .catch(Sequelize.ValidationError, (err) => {
-                res.status(422).send(err.errors);
-            })
             .catch(err => {
-                res.status(400).send({ message: err.message });
+                res.status(400).send(err);
             });
     }
 }

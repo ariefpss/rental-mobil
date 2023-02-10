@@ -19,8 +19,9 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       unique: {
         args: true,
-        msg: 'Username sudah ada di sistem.'
+        msg: 'Username suda ada di sistem.'
       }
+
     },
     email: {
       type: DataTypes.STRING,
